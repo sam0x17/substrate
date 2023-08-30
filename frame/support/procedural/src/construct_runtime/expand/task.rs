@@ -51,7 +51,6 @@ pub fn expand_outer_task(pallet_decls: &[Pallet], scrate: &TokenStream) -> Token
 		/// An aggregation of all `Task` enums across all pallets included in the current runtime.
 		#[derive(
 			Clone, Eq, PartialEq,
-			// Ord, PartialOrd,
 			#scrate::__private::codec::Encode, #scrate::__private::codec::Decode,
 			// #scrate::__private::codec::MaxEncodedLen,
 			#scrate::__private::scale_info::TypeInfo,
