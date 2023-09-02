@@ -228,9 +228,6 @@ pub mod pallet {
 			#[inject_runtime_type]
 			type RuntimeEvent = ();
 
-			#[inject_runtime_type]
-			type RuntimeTask = ();
-
 			type Balance = u64;
 
 			type ReserveIdentifier = ();

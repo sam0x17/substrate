@@ -906,6 +906,7 @@ mod tests {
 		type MaxFreezes = ConstU32<1>;
 		type RuntimeHoldReason = ();
 		type MaxHolds = ConstU32<1>;
+		type RuntimeTask = RuntimeTask;
 	}
 
 	parameter_types! {

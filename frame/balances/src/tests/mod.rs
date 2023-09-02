@@ -136,6 +136,7 @@ impl Config for Test {
 	type FreezeIdentifier = TestId;
 	type MaxFreezes = ConstU32<2>;
 	type MaxHolds = ConstU32<2>;
+	type RuntimeTask = RuntimeTask;
 }
 
 #[derive(Clone)]
