@@ -874,12 +874,14 @@ pub fn inject_runtime_type(_: TokenStream, tokens: TokenStream) -> TokenStream {
 	let item = syn::parse_macro_input!(item as TraitItemType);
 	if item.ident != "RuntimeCall" &&
 		item.ident != "RuntimeEvent" &&
+		item.ident != "RuntimeTask" &&
 		item.ident != "RuntimeOrigin" &&
 		item.ident != "PalletInfo"
 	{
 		return syn::Error::new_spanned(
 			item,
-			"`#[inject_runtime_type]` can only be attached to `RuntimeCall`, `RuntimeEvent`, `RuntimeOrigin` or `PalletInfo`",
+			"`#[inject_runtime_type]` can only be attached to `RuntimeCall`, `RuntimeEvent`, \
+			`RuntimeTask`, `RuntimeOrigin` or `PalletInfo`",
 		)
 		.to_compile_error()
 		.into();

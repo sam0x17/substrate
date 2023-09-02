@@ -282,6 +282,7 @@ mod tests {
 		type RuntimeOrigin = RuntimeOrigin;
 		type Nonce = u64;
 		type Hash = H256;
+		type RuntimeTask = RuntimeTask;
 		type RuntimeCall = RuntimeCall;
 		type Hashing = BlakeTwo256;
 		type AccountId = u64;

@@ -44,6 +44,7 @@ impl frame_system::Config for Test {
 	type Block = Block;
 	type BlockHashCount = ConstU32<250>;
 	type RuntimeOrigin = RuntimeOrigin;
+	type RuntimeTask = RuntimeTask;
 	type RuntimeCall = RuntimeCall;
 	type RuntimeEvent = RuntimeEvent;
 	type BaseCallFilter = TestBaseCallFilter;

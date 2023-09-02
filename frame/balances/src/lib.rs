@@ -228,6 +228,9 @@ pub mod pallet {
 			#[inject_runtime_type]
 			type RuntimeEvent = ();
 
+			#[inject_runtime_type]
+			type RuntimeTask = ();
+
 			type Balance = u64;
 
 			type ReserveIdentifier = ();
@@ -248,6 +251,10 @@ pub mod pallet {
 		#[pallet::no_default_bounds]
 		type RuntimeEvent: From<Event<Self, I>>
 			+ IsType<<Self as frame_system::Config>::RuntimeEvent>;
+
+		/// The overarching task type.
+		#[pallet::no_default]
+		type RuntimeTask: AggregatedTask;
 
 		/// Weight information for extrinsics in this pallet.
 		type WeightInfo: WeightInfo;

@@ -70,7 +70,7 @@ pub fn expand_outer_task(pallet_decls: &[Pallet], scrate: &TokenStream) -> Token
 				todo!();
 			}
 
-			fn weight(&self) -> Weight {
+			fn weight(&self) -> #scrate::pallet_prelude::Weight {
 				todo!();
 			}
 

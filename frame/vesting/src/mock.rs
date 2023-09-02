@@ -46,6 +46,7 @@ impl frame_system::Config for Test {
 	type BlockHashCount = ConstU64<250>;
 	type BlockLength = ();
 	type BlockWeights = ();
+	type RuntimeTask = RuntimeTask;
 	type RuntimeCall = RuntimeCall;
 	type DbWeight = ();
 	type RuntimeEvent = RuntimeEvent;

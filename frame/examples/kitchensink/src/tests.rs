@@ -43,6 +43,7 @@ impl frame_system::Config for Test {
 	type Block = Block;
 	type BlockHashCount = ConstU64<10>;
 	type RuntimeOrigin = RuntimeOrigin;
+	type RuntimeTask = RuntimeTask;
 	type RuntimeCall = RuntimeCall;
 	type RuntimeEvent = RuntimeEvent;
 	type PalletInfo = PalletInfo;

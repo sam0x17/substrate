@@ -240,6 +240,8 @@ pub mod pallet {
 			type RuntimeCall = ();
 			#[inject_runtime_type]
 			type PalletInfo = ();
+			#[inject_runtime_type]
+			type RuntimeTask = ();
 			type BaseCallFilter = frame_support::traits::Everything;
 			type BlockHashCount = frame_support::traits::ConstU64<10>;
 			type OnSetCode = ();
@@ -294,7 +296,7 @@ pub mod pallet {
 			+ From<Call<Self>>;
 
 		/// The aggregated `RuntimeTask` type.
-		#[pallet::no_default]
+		#[pallet::no_default_bounds]
 		type RuntimeTask: AggregatedTask;
 
 		/// This stores the number of previous transactions associated with a sender account.
