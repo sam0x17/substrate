@@ -1128,6 +1128,7 @@ mod mock {
 		type MaxFreezes = ();
 		type RuntimeHoldReason = ();
 		type MaxHolds = ();
+		type RuntimeTask = RuntimeTask;
 	}
 
 	/// Test only Weights for state migration.

@@ -62,6 +62,7 @@ impl pallet_balances::Config for Test {
 	type DustRemoval = ();
 	type AccountStore = System;
 	type ExistentialDeposit = ConstU64<1>;
+	type RuntimeTask = RuntimeTask;
 }
 
 pub struct TestBaseCallFilter;

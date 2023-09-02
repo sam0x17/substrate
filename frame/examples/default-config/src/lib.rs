@@ -201,6 +201,7 @@ pub mod tests {
 
 		type OverwrittenDefaultValue = frame_support::traits::ConstU32<678>;
 		type OverwrittenDefaultType = u128;
+		type RuntimeTask = RuntimeTask;
 	}
 
 	#[test]
